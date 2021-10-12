@@ -244,15 +244,6 @@ footer {
       display: block;
    }
    header ul {
-      display: none;
-   }
-   .menu.active i{
-      display: none;
-   }
-   #remove-menu.active {
-      display: block;
-   }
-   ul.active {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -262,13 +253,24 @@ footer {
       background-color: #122A57;
       border-radius: 0 0 10px 10px;
       max-width: 50vw;
+      height: 0;
+      visibility: hidden;
+      overflow-y: hidden;
+      transition: .5s;
+   }
+   .menu.active i{
+      display: none;
+   }
+   #remove-menu.active {
+      display: block;
+   }
+   ul.active {
       height: 30vh;
+      visibility: visible;
+      overflow-y: auto;
    }
 }
 @media screen and (max-width: 424.9px) {
-   header ul {
-      display: none;
-   }
    .flex-container img :not(#servicos img), .divimg{
       display: none;
    }
